@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* 레이아웃 */
+#header {
+  width: 100%;
+  border-bottom: 1px solid #c6c6c6;
+  background-color: #fff;
+}
+#menuNav {
+}
+#banner {
+}
+#cosmetics {
+  background: #f8f8f8;
+}
+#login {
+}
+#footer {
+  /* background-color: #211f1f; */
+}
+
+/* 레이아웃 */
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/* Row 영역 */
+.row {
+  padding: 0 28px;
+  background-color: #ececec;
+}
+
+/* 헤더 영역 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+}
+
+.header h1 em {
+}
+
+.header h1 em img {
+  width: 50px;
+}
+
+.header .user_menu {
+}
+.header .user_menu ul {
+  display: flex;
+}
+.header .user_menu ul li {
+  width: 100px;
+  text-align: center;
+}
+.header .user_menu ul li a {
+  display: block;
+  padding: 19px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+}
+
+.cosmetic_menu {
+  border-top: 1px solid #c6c6c6;
+}
+.cosmetic_menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+.cosmetic_menu li {
+  width: 100px;
+  text-align: center;
+}
+.cosmetic_menu li a {
+  display: block;
+  padding: 19px 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #444;
+}
+
+/* 배너 */
+.banner {
+}
+
+.banner img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+
+/* 로그인 폼 */
+.login_form {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 17px;
+}
+
+.login_form .login_form_box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.login_form .login_form_box input {
+  border: none;
+  border-radius: 5px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+}
