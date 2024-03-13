@@ -10,13 +10,12 @@
 }
 #banner {
 }
-#cosmetics {
-  background: #f8f8f8;
+#content {
 }
 #login {
 }
 #footer {
-  /* background-color: #211f1f; */
+  background-color: #211f1f;
 }
 
 /* 레이아웃 */
@@ -28,7 +27,6 @@
 /* Row 영역 */
 .row {
   padding: 0 28px;
-  background-color: #ececec;
 }
 
 /* 헤더 영역 */
@@ -95,25 +93,47 @@
 }
 
 /* 로그인 폼 */
-.login_form {
+.login {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
+}
 
-  font-size: 17px;
+.login_form {
+  width: 280px;
+
+  padding: 50px;
+  background-color: #f6f6f6;
 }
 
 .login_form .login_form_box {
   display: flex;
   flex-direction: column;
-  margin-bottom: 18px;
+  margin-bottom: 25px;
+}
+
+.login_form .login_form_box:last-child {
+  margin-bottom: 0;
+}
+
+.login_form .login_form_box label {
+  cursor: pointer;
+  font-family: "Nanum Pen Script";
+  font-size: 18px;
+  font-weight: bold;
+
+  margin-bottom: 8px;
+
+  background-color: #f6f6f6;
 }
 
 .login_form .login_form_box input {
   border: none;
   border-radius: 5px;
+  border-bottom: 1px solid #c6c6c6;
 
   padding-top: 10px;
   padding-bottom: 10px;
@@ -122,5 +142,160 @@
 
   cursor: pointer;
   font-family: "Nanum Pen Script";
-  font-size: 20px;
+  font-size: 15px;
+}
+
+/* 화장품 아이템 리스트*/
+.cosmetic_latest,
+.cosmetic_best {
+  padding: 33px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.cosmetics {
+}
+
+.cosmetics h2 {
+  width: 24%;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  text-align: center;
+  background-color: #c6c6c6;
+  margin: 5px;
+  font-family: "Nanum Pen Script";
+}
+
+.cosmetics .cosmeticList_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 화장품 아이템 */
+.cosmeticItem {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  border: 1px solid #c6c6c6;
+
+  margin: 5px;
+}
+
+.cosmeticItem .cosmeticItem_img {
+}
+
+.cosmeticItem .cosmeticItem_img img {
+  width: 100%;
+}
+
+.cosmeticItem .cosmeticItem_info {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  border-top: 1px solid #c6c6c6;
+}
+
+.cosmeticItem .cosmeticItem_info div {
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  font-family: "Nanum Pen Script";
+}
+
+/* 푸터 */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 33px 30px 33px;
+}
+
+.footer_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_box {
+  display: flex;
+  align-items: center;
+  color: #8f8f8f;
+  font-size: 12px;
+  font-family: "Nanum Pen Script";
+}
+
+.footer_box ul {
+  display: flex;
+  align-items: center;
+}
+
+.footer_box ul li {
+  white-space: nowrap;
+}
+
+.footer_box ul li a {
+  color: #8f8f8f;
+  font-size: 12px;
+  font-family: "Nanum Pen Script";
+}
+
+.footer_box ul li::before {
+  display: inline-block;
+  content: "|";
+  color: #8f8f8f;
+
+  box-sizing: border-box;
+  margin: 0 8px;
+  font-size: 12px;
+}
+
+.footer_box ul li:first-child::before {
+  display: none;
+}
+
+.footer_info_top ul li img {
+  width: 30px;
+}
+
+.footer_info_top {
+  margin-bottom: 17px;
+}
+
+.footer_info_bottom {
+  margin-bottom: 17px;
+}
+
+.footer_sns {
+  width: 300px;
+}
+
+.footer_sns ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_sns ul li {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.footer_sns ul li a {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  line-height: 35px;
+  color: #211f1f;
+  background-color: #c6c6c6;
+}
+
+.footer_sns ul li a:hover {
+  color: #211f1f;
+  background-color: #fff;
+  transition: all 0.3s;
 }
