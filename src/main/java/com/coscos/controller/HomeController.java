@@ -25,17 +25,28 @@ public class HomeController {
 	
 	@Autowired
 	private CosmeticService cosmeticService;
+	
+	@Value("${servlet.multipart.location}")
+	private String filepath;
 
-	@GetMapping("/coscos")
-	public  List<Cosmetic> list() {
-		List<Cosmetic> list = cosmeticService.getList();
-		System.out.println("################" + list);
+	@GetMapping("/coscos/latest")
+	public  List<Cosmetic> getNewList() {
+		List<Cosmetic> list = cosmeticService.getNewList().subList(0, 4);
+		System.out.println("####################" + list);
+		return list;
+	}
+	
+	@GetMapping("/coscos/sales")
+	public  List<Cosmetic> getSalesList() {
+		List<Cosmetic> list = cosmeticService.getSalesList().subList(0, 4);
+		System.out.println("####################" + list);
 		return list;
 	}
 	
 	@GetMapping("/coscos/display")
 	public ResponseEntity<Resource> display(@RequestParam("filename") String filename) {
-		String path = "C:\\Coscos\\upload\\";
+		String path = filepath + "\\product\\";
+		System.out.println(path);
 		String folder = "";
 		Resource resource = new FileSystemResource(path + folder + filename);
 		if(!resource.exists()) 

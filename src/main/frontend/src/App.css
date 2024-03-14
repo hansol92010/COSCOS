@@ -203,9 +203,9 @@
 
 .cosmeticItem .cosmeticItem_info div {
   padding: 10px;
-  width: 50%;
   text-align: center;
   font-family: "Nanum Pen Script";
+  white-space: nowrap;
 }
 
 /* 푸터 */

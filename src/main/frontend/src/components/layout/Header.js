@@ -38,7 +38,7 @@ export default function Header() {
           <div className="cosmetic_menu">
             <ul>
               <li>
-                <Link>스킨/케어</Link>
+                <Link>스킨케어</Link>
               </li>
               <li>
                 <Link>메이크업</Link>
