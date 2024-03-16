@@ -15,28 +15,21 @@ function App() {
   const [salesCosmetics, setSalesCosmetics] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("/coscos/sales")
-      .then((response) => setLatestCosmetics(response.data))
-      .catch((error) => console.log(error));
+    const latest = async () => {
+      axios
+        .get("/coscos/latest")
+        .then((response) => setLatestCosmetics(response.data))
+        .catch((error) => console.log(error));
+    };
+    latest();
   }, []);
-
-  console.log(latestCosmetics);
 
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              latestCosmetics={latestCosmetics}
-              salesCosmetic={salesCosmetics}
-            />
-          }
-        />
-        <Route path="/member/login" element={<Login />} />
+        <Route path="/" element={<Home latestCosmetics={latestCosmetics} />} />
+        <Route path="/coscos/login" element={<Login />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -23,7 +23,7 @@ export default function Header() {
             <div className="user_menu">
               <ul>
                 <li>
-                  <Link to="/member/login">로그인</Link>
+                  <Link to="/coscos/login">로그인</Link>
                 </li>
                 <li>
                   <Link>마이페이지</Link>

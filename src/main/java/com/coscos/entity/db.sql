@@ -17,5 +17,10 @@ values(100, null, '기초');
 insert into Category(category_code, parent_category_code, category_name) 
 values(101, 100, '토너');
 
+
+insert into MEMBER(user_id, user_pwd, role, enabled) 
+values("test", "12345", "MEMBER", true);
+
 select * from Cosmetic;
 select * from Category;
+select * from MEMBER;
